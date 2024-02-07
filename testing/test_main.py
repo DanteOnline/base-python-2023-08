@@ -7,7 +7,7 @@ def test_hello_path_view(client):
     url = f'/hello/{name}/'
     response = client.get(url)
     assert response.status_code == 200
-    assert response.json == {"message": f"Hello somename!"}
+    assert response.json == {"message": "Hello somename!"}
 
 def test_hello_view(client):
     url = '/hello/?name=onetwothree'
